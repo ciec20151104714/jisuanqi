@@ -36,31 +36,44 @@ class ViewController: UIViewController {
  }
  else if q == "="  ||  q == "c"
  {
-    var r = 0.0
+    var r:Double = 0
+    let s:Int = 0
     switch a3 {
     case "+":
         r = Double(a1)! + Double(a2)!
+        a.text = "\(r)"
+        a1=String(r)
+        a2=""
+        a3=""
        
     case "-":
         r =  Double(a1)! - Double(a2)!
+        a.text = "\(r)"
+        a1=String(r)
+        a2=""
+        a3=""
      
     case "*":
         r = Double(a1)! * Double(a2)!
+        a.text = "\(r)"
+        a1=String(r)
+        a2=""
+        a3=""
       
     case "/":
        
               r = Double(a1)! / Double(a2)!
-    case "c":
-        
-        r = 0
+              a.text = "\(r)"
+              a1=String(r)
+              a2=""
+              a3=""
     default:
-        r = 0.0
+        a1=""
+        a2=""
+        a3=""
+        a.text = "\(s)"
     
     }
-    a.text = "\(r)"
-    a1=""
-    a2=""
-    a3=""
     return
     
  }
