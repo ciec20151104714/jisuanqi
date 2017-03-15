@@ -28,56 +28,38 @@ class ViewController: UIViewController {
 @IBAction func `as`(_ sender: UIButton) {
         
        let q = sender.currentTitle
- 
  if q=="+"||q=="-"||q=="*"||q=="/"
  {
     a3 = q!
     return
  }
- else if q == "="  ||  q == "c"
+ else if q == "="
  {
-    var r:Double = 0
-    let s:Int = 0
+    var r = 0.0
     switch a3 {
     case "+":
         r = Double(a1)! + Double(a2)!
-        a.text = "\(r)"
-        a1=String(r)
-        a2=""
-        a3=""
        
     case "-":
         r =  Double(a1)! - Double(a2)!
-        a.text = "\(r)"
-        a1=String(r)
-        a2=""
-        a3=""
      
     case "*":
         r = Double(a1)! * Double(a2)!
-        a.text = "\(r)"
-        a1=String(r)
-        a2=""
-        a3=""
       
     case "/":
        
               r = Double(a1)! / Double(a2)!
-              a.text = "\(r)"
-              a1=String(r)
-              a2=""
-              a3=""
     default:
-        a1=""
-        a2=""
-        a3=""
-        a.text = "\(s)"
+        r = 0.0
     
     }
+    a.text = "\(r)"
+    a1=""
+    a2=""
+    a3=""
     return
     
  }
-  
     if a3 == ""
     {
         a1=a1+q!
